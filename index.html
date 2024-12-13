@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>McDonald's Style Scroll-Down Website</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1><a href="#" onclick="openNearestMcDonalds()">McDonald's</a></h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#special-combos">Special Combos</a></li>
+        <li><a href="#nutrition-menu">Nutrition Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="page">
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="https://imgur.com/IozCwTW.jpg" alt="Slide 1">
+      </div>
+      <div class="slide">
+        <img src="https://imgur.com/EEQLSNc.jpg" alt="Slide 2">
+      </div>
+      <div class="slide">
+        <img src="https://imgur.com/it6mrxx.jpg" alt="Slide 3">
+      </div>
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <div id="welcomeModal" class="modal">
+      <span id="closeModal" class="close">&times;</span>
+      <div class="modal-text">
+        <h2>Welcome to McDonald's</h2>
+      </div>
+    </div>
+  </section>
+
+  <section id="special-combos" class="page">
+    <h2>Choose Your Special Combo</h2>
+    <div class="checkbox-container">
+      <div class="item" onclick="toggleSelection(this, '薯條')">
+        <img src="https://imgur.com/SpnHetO.jpg" alt="薯條">
+        <label>薯條</label>
+      </div>
+      <div class="item" onclick="toggleSelection(this, '霜淇淋')">
+        <img src="https://imgur.com/x9V1fdv.jpg" alt="霜淇淋">
+        <label>霜淇淋</label>
+      </div>
+    </div>
+    <button type="button" onclick="getSpecialOffers()">Get Offers</button>
+    <div id="offer-results" class="offer-results"></div>
+  </section>
+
+  <section id="nutrition-menu" class="page">
+    <h2>Nutrition Menu</h2>
+    <p>Explore the nutritional information for your favorite McDonald's items.</p>
+    <table class="nutrition-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Calories</th>
+          <th>Protein (g)</th>
+          <th>Fat (g)</th>
+          <th>Carbs (g)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>大麥克</td>
+          <td>550</td>
+          <td>25</td>
+          <td>30</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>雞塊</td>
+          <td>420</td>
+          <td>24</td>
+          <td>25</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>薯條</td>
+          <td>510</td>
+          <td>6</td>
+          <td>24</td>
+          <td>67</td>
+        </tr>
+        <tr>
+          <td>冰炫風</td>
+          <td>640</td>
+          <td>11</td>
+          <td>21</td>
+          <td>102</td>
+        </tr>
+        <tr>
+          <td>雙層牛肉吉事堡</td>
+          <td>440</td>
+          <td>25</td>
+          <td>22</td>
+          <td>34</td>
+        </tr>
+        <tr>
+          <td>霜淇淋</td>
+          <td>200</td>
+          <td>5</td>
+          <td>6</td>
+          <td>32</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
