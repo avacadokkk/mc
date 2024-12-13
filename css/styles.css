@@ -1,0 +1,71 @@
+
+/* General Styles */
+body {
+    font-family: Monospace, Serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffc72c;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: #d52b1e;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #d52b1e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.page {
+    min-height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .checkbox-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .checkbox-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
